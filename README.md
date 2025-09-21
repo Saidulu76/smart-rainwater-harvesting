@@ -1,56 +1,36 @@
-# Smart Rainwater Harvesting Management System
+# 🌧️ Smart Rainwater Harvesting Dashboard  
 
-**Category:** Water Conservation  
-**Difficulty:** Intermediate  
-**Time Required:** ~30 hours (team of 2–3)
+A data-driven dashboard built with **Streamlit** to monitor rainfall, water storage, and usage. The project also integrates forecasting and a genetic algorithm–based optimization module for smarter water resource management.  
 
-This repository contains a starter project for the *Smart Rainwater Harvesting Management System*:
-- LSTM model (Keras/TensorFlow) to forecast rainfall and tank storage.
-- A simple genetic algorithm to compute near-optimal usage schedules that minimize overflow and maximize usage.
-- A minimal Streamlit dashboard to visualize current storage, forecasts, and recommendations.
+---
 
-## Structure
-```
-/data                # dataset (included)
-/src                 # training and optimization scripts
-/models              # saved model artifacts (created after training)
-/app                 # Streamlit app to run dashboard
-/notebooks           # example notebook for experiments
-requirements.txt
-README.md
-```
+## 📺 Demo Video
+Watch the project in action:  
 
-## How to run
+➡️ [Demo Video](docs/Recording_2025-09-21_163829.mp4)  
 
-1. Create a virtual environment and install requirements:
-```bash
-python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+(Or host on YouTube for inline preview — recommended!)
 
-2. Train the LSTM model (creates models/lstm_model.h5):
-```bash
-python src/train_lstm.py --data data/smart_rainwater_data (1).csv --epochs 10
-```
+---
 
-3. Run genetic algorithm optimization (outputs a JSON with best schedule):
-```bash
-python src/ga_optimization.py --data data/smart_rainwater_data (1).csv --model models/lstm_model.h5
-```
+## 🖼️ Dashboard Preview
+Here’s a sneak peek of the dashboard:  
 
-4. Run dashboard (Streamlit):
-```bash
-streamlit run app/streamlit_app.py
-```
+![Dashboard Screenshot](docs/dashboard_preview.png)
 
-## Notes
-- The dataset included is `smart_rainwater_data (1).csv`. Adjust column names in `src/train_lstm.py` if necessary.
-- This starter project is intentionally simple and easy to extend:
-  - Add better feature engineering, hyperparameter tuning, cross-validation.
-  - Replace the GA with a more advanced optimizer or constraints.
-  - Connect the Streamlit app to a live feed / sensor API.
+---
 
-## Contact
-If you want more features (automated hyperparameter tuning, full CI/CD for GitHub, Dockerfile, or deployment scripts), reply here and I'll add them.
+## ✨ Features
+- 📊 Rainfall Monitoring – visualize historical and forecast rainfall trends  
+- 💧 Storage & Usage Tracking – monitor tank water levels and consumption  
+- 🔮 Forecast Integration – plan water usage based on predicted rainfall  
+- 🧬 Optimization Module – optimize storage and usage with genetic algorithms  
+- 📂 Custom Data Upload – upload your own CSV datasets for analysis  
 
+---
+
+## 🚀 Installation & Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/smart-rainwater-harvesting.git
+   cd smart-rainwater-harvesting
